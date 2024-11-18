@@ -1,0 +1,265 @@
+/* CSS Stylesheet */
+
+
+/*VARIABLES*/
+:root{
+    --themeColor: #FFFF00;  /*yellow*/
+    --bgNavColor: #444444; /*dark gray*/
+    --bgSemiTrprt: rgba(0, 0, 0, 0.75); /*semi transparent black bg*/
+}
+
+
+/*GENERAL*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*TOP TITLE*/
+header>h1 {
+    padding: 1em;
+
+    background-color: var(--themeColor);
+
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+/*NAVIGATION BAR*/
+ul {
+    background-color: var(--bgNavColor);
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    padding: 1em 2em;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.90em;
+}
+
+
+
+/*SONG DETAILS*/
+main>header {
+    background: url('images/talking_heads-speaking_in_tongues.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+/*semi transparent box*/
+main>header>section {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    padding: 3em 1.5em;
+
+    background: var(--bgSemiTrprt);
+
+    text-transform: uppercase;
+}
+/*song title*/
+main>header>section>h1 {
+    color: var(--themeColor);
+    font-size: 2.5em;
+    padding-top: 1.8em;
+}
+/*artist*/
+main>header>section>h2 {
+    color: white;
+    font-size: 1.8em;
+
+}
+/*album name*/
+main>header>section>h3 {
+    margin-top: 1em;
+    color: #cccbca;
+    font-size: 1.2em;
+}
+/*song image*/
+main>header>section>img {
+    max-width: 15em;
+    max-height: 15em;
+    margin: 2em;
+    float: right;
+
+    background-image: url('images/talking_heads-speaking_in_tongues.png');
+}
+
+
+main>article {
+    align-items: center;
+    margin: 2em 7.5em;
+}
+
+/*ABOUT THE SONG*/
+main>article>aside {
+    width: 25em;
+    float: right;
+}
+        main>article>aside>h2 {
+            padding: .95em;
+
+            background-color: var(--themeColor);
+            color: black;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        main>article>aside>p,
+        blockquote {
+            padding: 2em 1em .5em;
+
+            background-color: var(--bgNavColor);
+            color: white;
+            font-size: 1.1em;
+        }
+
+        blockquote {
+            padding: 2.8em;
+        }
+
+        sup>a {
+            text-decoration: none;
+            color: var(--themeColor);
+        }
+
+
+        main>article>aside>section {
+            text-align: center;
+            background-color: var(--bgNavColor);
+
+        }
+
+        iframe {
+            padding: 1.5em 0;
+            border-top: .3em solid white;
+
+            aspect-ratio: 16 / 9;
+            width: 90%;
+        }
+/*ABOUT THE SONG*/
+        
+
+
+
+/*VERSES*/
+
+main>article>section {
+    display: inline-block;
+    width: 50%;
+    border-left: .2em solid var(--themeColor);
+    margin: 4.5em 0 0 2em;
+    
+}
+
+        main>article>section:nth-child(odd) {
+            margin-left: 4em;
+        }
+
+        main>article>section>h2 {
+            background-color: var(--themeColor);
+            padding: .5em 1.25em;
+            width: fit-content;
+
+            text-transform: uppercase;
+        }
+
+        main>article>section>p {
+            padding-left: 1.8em;
+            padding-top: .8em;
+
+            font-size: 1.3em;
+        }
+/*VERSES*/
+
+
+
+/*FOOTER*/
+main>article>footer {
+    margin-top: 3em;
+    border-top: 5px solid var(--themeColor);
+    padding-top: 2em;
+    text-align: left;
+    clear: right;
+}
+
+main>article>footer>section {
+    font-size: .85em;
+}
+
+footer>section>cite>a {
+    display: inline-block;
+    padding: .4em;
+
+    background-color: var(--themeColor);
+    color: black;
+    text-decoration: none;
+}
+
+
+/*NARROWER SCREENS*/
+
+@media only screen and (max-width: 1200px) {
+    main>article {
+        margin: 2em 2em;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    main>header>section {
+        text-align: center;
+    }
+
+    main>header>section>h1 {
+        clear: right;
+        padding: 0;
+    }
+
+    main>header>section>img {
+        float: none;
+    }
+
+    main>article {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    main>article>footer>section {
+        font-size: .7em;
+    }
+
+    main>article>aside {
+        width: 35em;
+    }
+
+
+}
