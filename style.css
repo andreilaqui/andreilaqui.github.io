@@ -11,6 +11,7 @@
 }
 
 /* Ice Theme */
+/*overwrites the boring initial color*/
 :root {
     --color-header-bg: #05445e;/*#3f92b7; /* Blue Grotto */
     --color-banner-bg: #e3eff9; /* Baby Blue */
@@ -30,12 +31,12 @@
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    /*prevents page from 'teleporting' position and instead moves smoothly*/
 }
 
 body {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:    /*maps the layout just like how it's drafted on paper*/
         "header header header"
         "banner banner banner"
         "nav nav nav"
@@ -81,7 +82,7 @@ header, .banner, .nav, .aside-left, .main-content, .aside-low, .footer {
 }
 
 nav ul{
-    list-style-type:none;
+    list-style-type: none;
     text-align: center;
 }
 
@@ -102,7 +103,7 @@ li a {
     grid-area: aside-left;
     background: var(--color-aside-left-bg);
     min-height: 200px;
-    position: sticky;
+    position: sticky;   /*nice way to keep the section visible*/
     top: 0;
     height: 100vh;
     overflow-y: auto;
@@ -118,7 +119,7 @@ li a {
     text-decoration: none;
     color: var(--color-header-bg);
     font-size: 1.25em;
-    line-height: 98%;
+    line-height: 98%;   /*mildly squeeze together long names with two lines*/
 }
 
 .aside-left a:hover {
@@ -137,7 +138,7 @@ li a {
     background-color: rgba(255, 255, 255, 0.6);
     margin: 20px 0;
     padding: 20px;
-    position: relative;
+    position: relative;     /*working with back-to-top position (absolute)*/
     box-shadow: 5px 5px 10px #05445e;
     border-radius: 8px;
     
@@ -145,8 +146,6 @@ li a {
 
 .main-content h2{
     padding: 18px 2px;
-    
-    /*border: 1px solid red;*/
 }
 
 section pre{
@@ -169,7 +168,7 @@ code{
 }
 
 .back-to-top, .toggle-button {
-    position: absolute;
+    position: absolute; /*working with .main-content section position (relative)*/
     top: 10px;
     right: 10px;
 
@@ -191,7 +190,7 @@ code{
 }
 
 .toggle-button {
-    right: 40px; /* Adjust this value to position it beside the "Back to top" button */
+    right: 40px; /* position it beside the back to top button */
     top: 8px;
     padding: 4px 5px 4px;
     margin:2px 0;
@@ -200,8 +199,7 @@ code{
 .aside-low {
     grid-area: aside-low;
     background: var(--color-aside-low-bg);
-    /* min-height: 50px; */
-    z-index: 1;
+    z-index: 1;     /*place it in front of sticky aside-left*/
 }
 
 .footer {
@@ -230,7 +228,7 @@ code{
 
 @media (max-width: 768px) {
     body {
-        grid-template-areas: 
+        grid-template-areas: /*just make it one big vertical page for narrow screens*/
             "header"
             "banner"
             "nav"
@@ -254,7 +252,7 @@ code{
     }
 
     section pre{
-        width: 75vw;    /*prevent from extending too wide*/
+        width: 75vw;    /*prevent from extending too wide on narrow screens*/
         overflow: auto; /*can scroll if phone is too narrow*/
     }
 
