@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header" id="top">
+        Andrei Laqui Personal Website
+    </header>
+    <div class="banner">
+        <h1>Javascript Cheatsheet</h1>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">HTML Cheatsheet</a></li>
+            <li><a href="css.html">CSS Cheatsheet</a></li>
+            <li><a href="js.html">Javascript Cheatsheet</a></li>
+        </ul>
+    </nav>
+    <aside class="aside-left">
+        <ul>
+            <li><a href="#array-methods"><h3>Array Methods</h3></a></li>
+            <li><a href="#arrow-functions"><h3>Arrow Functions</h3></a></li>
+            <li><a href="#async-await"><h3>Async/Await</h3></a></li>
+            <li><a href="#default-parameters"><h3>Default Parameters</h3></a></li>
+            <li><a href="#destructuring"><h3>Destructuring</h3></a></li>
+            <li><a href="#event-delegation"><h3>Event Delegation</h3></a></li>
+            <li><a href="#fetch-api"><h3>Fetch API</h3></a></li>
+            <li><a href="#local-storage"><h3>Local Storage</h3></a></li>
+            <li><a href="#logical-operators"><h3>Logical Operators</h3></a></li>
+            <li><a href="#min-max"><h3>Math.min() and Math.max()</h3></a></li>
+            <li><a href="#nullish-coalescing"><h3>Nullish Coalescing</h3></a></li>
+            <li><a href="#object-literals"><h3>Object Literals</h3></a></li>
+            <li><a href="#optional-chaining"><h3>Optional Chaining</h3></a></li>
+            <li><a href="#promises"><h3>Promises</h3></a></li>
+            <li><a href="#rest-parameters"><h3>Rest Parameters</h3></a></li>
+            <li><a href="#session-storage"><h3>Session Storage</h3></a></li>
+            <li><a href="#spread-operator"><h3>Spread Operator</h3></a></li>
+            <li><a href="#template-literals"><h3>Template Literals</h3></a></li>
+            
+        </ul>
+    </aside>
+    <main class="main-content">
+        <section id="array-methods">
+            <h2>Array Methods</h2>
+            <p>JavaScript provides several methods to manipulate arrays, such as <code>map</code>, <code>filter</code>, and <code>reduce</code>.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8, 10]</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="arrow-functions">
+            <h2>Arrow Functions</h2>
+            <p>Arrow functions provide a concise syntax for writing function expressions.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="async-await">
+            <h2>Async/Await</h2>
+            <p>Async/await allows you to write asynchronous code in a synchronous manner.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>async function fetchData() {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="default-parameters">
+            <h2>Default Parameters</h2>
+            <p>Default parameters allow you to initialize named parameters with default values if no value or <code>undefined</code> is passed.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>function greet(name = 'Guest') {
+    return `Hello, ${name}!`;
+}
+console.log(greet()); // Output: 'Hello, Guest!'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="destructuring">
+            <h2>Destructuring</h2>
+            <p>Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const user = { name: 'John', age: 30 };
+const { name, age } = user;
+console.log(name); // Output: 'John'
+console.log(age); // Output: 30</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="event-delegation">
+            <h2>Event Delegation</h2>
+            <p>Event delegation allows you to handle events at a higher level in the DOM, rather than adding event listeners to individual elements.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>document.querySelector('#parent').addEventListener('click', function(event) {
+    if (event.target.matches('.child')) {
+        console.log('Child element clicked');
+    }
+});</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="fetch-api">
+            <h2>Fetch API</h2>
+            <p>The Fetch API provides a modern way to make network requests.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>fetch('https://api.example.com/data')
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="local-storage">
+            <h2>Local Storage</h2>
+            <p>Local Storage allows you to store data in the browser that persists even after the browser is closed.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>localStorage.setItem('key', 'value');
+const value = localStorage.getItem('key');
+console.log(value); // Output: 'value'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="logical-operators">
+            <h2>Logical Operators</h2>
+            <p>Logical operators can be used to simplify conditional statements.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const isTrue = true;
+const result = isTrue && 'Yes'; // Output: 'Yes'
+const fallback = isTrue || 'No'; // Output: 'Yes'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="min-max">
+            <h2>Math.min() and Math.max()</h2>
+            <p>Use <code>Math.min()</code> and <code>Math.max()</code> to find the minimum and maximum values in an array.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const array = [4, 5, 7, 2, 3];
+console.log(Math.min(...array)); // Output: 2
+console.log(Math.max(...array)); // Output: 7</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="nullish-coalescing">
+            <h2>Nullish Coalescing</h2>
+            <p>The nullish coalescing operator (<code>??</code>) provides a way to handle default values for <code>null</code> or <code>undefined</code>.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const value = null;
+const defaultValue = value ?? 'Default';
+console.log(defaultValue); // Output: 'Default'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="object-literals">
+            <h2>Object Literals</h2>
+            <p>Object literals provide a concise way to create objects with properties.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const name = 'John';
+const user = {
+    name,
+    greet() {
+        console.log(`Hello, ${this.name}!`);
+    }
+};
+user.greet(); // Output: 'Hello, John!'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="optional-chaining">
+            <h2>Optional Chaining</h2>
+            <p>Optional chaining allows you to safely access deeply nested properties.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const user = { name: 'John', address: { city: 'New York' } };
+const city = user?.address?.city;
+console.log(city); // Output: 'New York'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="promises">
+            <h2>Promises</h2>
+            <p>Promises provide a way to handle asynchronous operations in JavaScript.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Success!'), 1000);
+});
+promise.then(result => console.log(result)); // Output: 'Success!'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="rest-parameters">
+            <h2>Rest Parameters</h2>
+            <p>Rest parameters allow you to represent an indefinite number of arguments as an array.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3)); // Output: 6</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="session-storage">
+            <h2>Session Storage</h2>
+            <p>Session Storage allows you to store data for the duration of the page session.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>sessionStorage.setItem('key', 'value');
+const value = sessionStorage.getItem('key');
+console.log(value); // Output: 'value'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="spread-operator">
+            <h2>Spread Operator</h2>
+            <p>The spread operator (<code>...</code>) allows an iterable to expand in places where zero or more arguments or elements are expected.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const array1 = [1, 2, 3];
+const array2 = [...array1, 4, 5];
+console.log(array2); // Output: [1, 2, 3, 4, 5]</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="template-literals">
+            <h2>Template Literals</h2>
+            <p>Template literals allow you to embed expressions within string literals, using backticks.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>const name = 'John';
+const greeting = `Hello, ${name}!`;
+console.log(greeting); // Output: 'Hello, John!'</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+    </main>
+    <aside class="aside-low">
+        <h5>Sources:</h5>
+        <ul>
+            <li>https://dev.to/techygeeky/top-20-javascript-tips-and-tricks-to-increase-your-speed-and-efficiency-283g</li>
+            <li>https://www.w3schools.com/js/</li>
+        </ul>
+        
+    </aside>
+    <footer class="footer">
+        <a href="https://www.facebook.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Andrei Laqui in Facebook"></a>
+        <a href="https://www.instagram.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Andrei Laqui in Instagram"></a>
+        <a href="https://www.linkedin.com/in/andrei-laqui-28a717311" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="Andrei Laqui at LinkedIn"></a>
+        <a href="https://flic.kr/ps/zbq8h" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/flickr.png" alt="Andrei Laqui in Flickr"></a>
+        <a href="mailto:dreilaqui@yahoo.com">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email Andrei Laqui">
+        </a>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

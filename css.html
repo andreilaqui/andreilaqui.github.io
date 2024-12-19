@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header" id="top">
+        Andrei Laqui Personal Website
+    </header>
+    <div class="banner">
+        <h1>CSS Cheatsheet</h1>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">HTML Cheatsheet</a></li>
+            <li><a href="css.html">CSS Cheatsheet</a></li>
+            <li><a href="js.html">Javascript Cheatsheet</a></li>
+        </ul>
+    </nav>
+    <aside class="aside-left">
+        <ul>
+            <li><a href="#not"><h3>:not()</h3></a></li>
+            <li><a href="#media"><h3>@media</h3></a></li>
+            <li><a href="#supports"><h3>@supports</h3></a></li>
+            <li><a href="#aspect-ratio"><h3>aspect-ratio</h3></a></li>
+            <li><a href="#boxshadow"><h3>box-shadow</h3></a></li>
+            <li><a href="#box-sizing-border-box"><h3>box-sizing and border-box</h3></a></li>
+            <li><a href="#clamp"><h3>clamp()</h3></a></li>
+            <li><a href="#clippath"><h3>clip-path</h3></a></li>
+            <li><a href="#column-count-gap"><h3>column-count and column-gap</h3></a></li>
+            <li><a href="#counter-reset-increment"><h3>counter-reset and counter-increment</h3></a></li>
+            <li><a href="#mix-blend-mode"><h3>mix-blend-mode</h3></a></li>
+            <li><a href="#overflow"><h3>overflow</h3></a></li>
+            <li><a href="#perspective-transform"><h3>perspective and transform</h3></a></li>
+            <li><a href="#vh-vw"><h3>vh and vw</h3></a></li>
+            <li><a href="#word-break"><h3>word-break</h3></a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <section id="not">
+            <h2>:not()</h2>
+            <p>This pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>p:not(.irrelevant) {
+    font-weight: bold;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+
+        <section id="media">
+            <h2>@media</h2>
+            <p>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries. With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>@media screen and (min-width: 900px) {
+    article {
+        padding: 1rem 3rem;
+    }
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="supports">
+            <h2>@supports</h2>
+            <p>This CSS at-rule lets you specify CSS declarations that depend on a browser's support for CSS features. Using this at-rule is commonly called a feature query. The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>@supports (display: flex) {
+    .flex-container > * {
+        text-shadow: 0 0 2px blue;
+        float: none;
+    }
+
+    .flex-container {
+        display: flex;
+    }
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="aspect-ratio">
+            <h2>aspect-ratio</h2>
+            <p>This property makes it much easier to maintain consistent proportions for elements across different screen sizes. It eliminates the need for complicated CSS tricks or JavaScript solutions.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.responsive-element {
+    width: 100%;
+    aspect-ratio: 16/9;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="boxshadow">
+            <h2>box-shadow</h2>
+            <p>Allows you to create shadows around elements, adding depth and dimension to your designs. You can customize the shadow’s color, offset, blur radius, and spread.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.element {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="box-sizing-border-box">
+            <h2>box-sizing and border-box</h2>
+            <p>By default, the content-box setting adds padding and borders to the content width, which can complicate responsive designs. Using box-sizing with border-box ensures that the total width calculation is predictable, making layout adjustments much smoother.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>/* Global box sizing reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Use content-box only for specific cases */
+.special-element {
+    box-sizing: content-box;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="clamp">
+            <h2>clamp()</h2>
+            <p>The clamp() CSS function clamps a middle value within a range of values between a defined minimum bound and a maximum bound. The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.demo {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="clippath">
+            <h2>clip-path</h2>
+            <p>The clip-path property allows you to shape elements using paths, creating custom shapes and masks. You can use various path syntaxes, such as circles, ellipses, polygons, and more.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.element {
+    clip-path: circle(50% at 50% 50%);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="column-count-gap">
+            <h2>column-count and column-gap</h2>
+            <p>These properties can be used to create multi-column layouts, similar to newspapers or magazines. You can control the number of columns and the spacing between them.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.content {
+    column-count: 3;
+    column-gap: 20px;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="counter-reset-increment">
+            <h2>counter-reset and counter-increment</h2>
+            <p>These properties can be used to create custom counters for numbering elements within a document. For example, you can use them to create numbered lists, page numbers, or other sequential elements.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>body {
+    counter-reset: my-sec-counter;
+    padding: 50px;
+}
+
+h2::before {
+    counter-increment: my-sec-counter;
+    content: "Section " counter(my-sec-counter) ". ";
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="mix-blend-mode">
+            <h2>mix-blend-mode</h2>
+            <p>The mix-blend-mode property allows you to blend elements together using different blending modes. This can create interesting visual effects, such as multiplying, screening, overlaying, or differencing elements.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.element1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.element2 {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: blue;
+    mix-blend-mode: multiply;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="overflow">
+            <h2>overflow</h2>
+            <p>The overflow CSS shorthand property sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>div {
+/* Keyword values */
+overflow: visible;
+overflow: hidden;
+overflow: clip;
+overflow: scroll;
+overflow: auto;
+overflow: hidden visible;
+
+/* Global values */
+overflow: inherit;
+overflow: initial;
+overflow: revert;
+overflow: revert-layer;
+overflow: unset;
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="perspective-transform">
+            <h2>perspective and transform</h2>
+            <p>The perspective and transform properties can be used to create 3D effects, such as rotations, translations, and scaling. By combining these properties, you can achieve visually stunning effects.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.element {
+    perspective: 500px;
+    transform: rotateZ(45deg);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        
+        <section id="vh-vw">
+            <h2>vh and vw</h2>
+            <p>These properties are perfect for creating full-screen elements such as hero sections or overlay menus. Pairing percentages with viewport units enhances layout flexibility.</p>
+            <p>1vw is relative to 1% of the width of the viewport<br>
+            1vh is relative to 1% of the height of the viewport</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>.sidebar {
+    width: min(30%, 300px);
+    padding: max(2vw, 1rem);
+}</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        <section id="word-break">
+            <h2>word-break</h2>
+            <p>The word-break CSS property sets whether line breaks appear wherever the text would otherwise overflow its content box.</p>
+            <div class="collapse-div">
+                <p><strong>Example:</strong></p>
+                <pre><code>/* Keyword values */
+word-break: normal;
+word-break: break-all;
+word-break: keep-all;
+word-break: auto-phrase; /* experimental */
+word-break: break-word; /* deprecated */
+
+/* Global values */
+word-break: inherit;
+word-break: initial;
+word-break: revert;
+word-break: revert-layer;
+word-break: unset;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+    
+        
+
+
+    </main>
+    <aside class="aside-low">
+        <h5>Sources:</h5>
+        <ul>
+            <li>https://raghavvelan.medium.com/hidden-gems-of-css-rarely-used-properties-48ab793bcc91</li>
+            <li>https://developer.mozilla.org/</li>
+            <li>https://www.kodnest.com/blog/building-responsive-websites-top-15-css-tricks-and-techniques</li>
+            <li>https://css-tricks.com/lets-look-50-interesting-css-properties-values/#word-break</li>
+        </ul>
+        <!-- FOR ADVERTISEMENTS -->
+    </aside>
+    <footer class="footer">
+        <a href="https://www.facebook.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Andrei Laqui in Facebook"></a>
+        <a href="https://www.instagram.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Andrei Laqui in Instagram"></a>
+        <a href="https://www.linkedin.com/in/andrei-laqui-28a717311" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="Andrei Laqui at LinkedIn"></a>
+        <a href="https://flic.kr/ps/zbq8h" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/flickr.png" alt="Andrei Laqui in Flickr"></a>
+        <a href="mailto:dreilaqui@yahoo.com">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email Andrei Laqui">
+        </a>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

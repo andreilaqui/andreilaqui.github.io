@@ -1,105 +1,366 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
-    <meta charset="utf-8">
-    <title>The Lyrics Party - Talking Heads - This Must Be The Place (Naive Melody)</title>
-    <meta name="description" content="This Must Be The Place (Naive Melody) Lyrics">
-    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>The Lyrics Party</h1>
-        <nav>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">top songs</a></li>
-                <li><a href="#">community</a></li>
-            </ul>
-        </nav>
+    
+    <header class="header" id="top">
+        Andrei Laqui Personal Website
     </header>
-
-    <main>
-        <header>
-            <section>
-                <img src="images/talking_heads-speaking_in_tongues.png">
-
-                <h1>This Must Be The Place (Naive Melody)</h1>
-                <h2>Talking Heads</h2>
-                <h3>Album: <strong>Speaking in Tongues</strong></h3>
-            </section>
-        </header>
-        <article>
-            <aside>
-                <h2>About the song</h2>
-                <p><em>"This Must Be the Place (Naive Melody)"</em> is a song by new wave band Talking Heads, released in November 1983 as the second single from their fifth album Speaking in Tongues. The lyrics were written by David Byrne, and the music was written by Byrne and the other members of the band, Chris Frantz, Tina Weymouth and Jerry Harrison.</p>
-                <p>In the "Self Interview" on the DVD of the concert film Stop Making Sense, Byrne states that it is a love song, a topic he tends to avoid because it is "kinda big." He also said of the song:</p>
-                <blockquote>That's a love song made up almost completely of non sequiturs, phrases that may have a strong emotional resonance but don't have any narrative qualities. It's a real honest kind of love song. I don't think I've ever done a real love song before. Mine always had a sort of reservation, or a twist. I tried to write one that wasn't corny, that didn't sound stupid or lame the way many do. I think I succeeded; I was pretty happy with that.<sup><a href="#cite1">[1]</a></sup></blockquote>
-
-                <section>
-                    <iframe src="https://www.youtube.com/embed/DFeforW2ycI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </section>
-            </aside>
-
-            <section>
-                <h2>[Verse 1]</h2>
-                <p>Home is where I want to be<br>
-                Pick me up and turn me round<br>
-                I feel numb, born with a weak heart<br>
-                I guess I must be having fun<br>
-                The less we say about it, the better<br>
-                Make it up as we go along<br>
-                Feet on the ground, head in the sky<br>
-                It's okay, I know nothing's wrong, nothing</p>
-            </section>
-
-            <section>
-                <h2>[Chorus]</h2>
-                <p>Hi-yeah, I got plenty of time<br>
-                Hi-yeah, you got light in your eyes<br>
-                And you're standing here beside me<br>
-                I love the passing of time<br>
-                Never for money, always for love<br>
-                Cover up and say goodnight, say goodnight</p>
-            </section>
-
-            <section>
-                <h2>[Verse 2]</h2>
-                <p>Home is where I want to be<br>
-                But I guess I'm already there<br>
-                I come home, she lifted up her wings<br>
-                I guess that this must be the place<br>
-                I can't tell one from the other<br>
-                Did I find you or you find me?<br>
-                There was a time before we were born<br>
-                If someone asks, this is where I'll be, where I'll be</p>
-            </section>
-
-            <section>
-                <h2>[Chorus]</h2>
-                <p>Hi-yeah, we drift in and out<br>
-                Hi-yeah, sing into my mouth<br>
-                Out of all those kinds of people<br>
-                You got a face with a view<br>
-                I'm just an animal looking for a home<br>
-                Share the same space for a minute or two<br>
-                And you love me 'til my heart stops<br>
-                Love me 'til I'm dead<br>
-                Eyes that light up, eyes look through you<br>
-                Cover up the blank spots, hit me on the head, ah-ooh</p>
-            </section>
-            <footer>
-                <section>
-                    <cite id="cite1"><sup>1</sup> (n.d.). This Must Be the Place (Naive Melody) - Wikipedia. Retrieved July 4, 2018, from <a href="https://en.wikipedia.org/wiki/This_Must_Be_the_Place_(Naive_Melody)">https://en.wikipedia.org/wiki/This_Must_Be_the_Place_(Naive_Melody)</a></cite>
-                </section>
-            </footer>
-        </article>
-
-
+    <div class="banner">
+        <h1>HTML Cheatsheet</h1>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">HTML Cheatsheet</a></li>
+            <li><a href="css.html">CSS Cheatsheet</a></li>
+            <li><a href="js.html">Javascript Cheatsheet</a></li>
+        </ul>
+    </nav>
+    <aside class="aside-left">
+        <ul>
+            <li><a href="#abbr"><h3>abbr</h3></a></li>
+            <li><a href="#bdi"><h3>bdi</h3></a></li>
+            <li><a href="#bdo"><h3>bdo</h3></a></li>
+            <li><a href="#cite"><h3>cite</h3></a></li>
+            <li><a href="#datalist"><h3>datalist</h3></a></li>
+            <li><a href="#details"><h3>details</h3></a></li>
+            <li><a href="#dialog"><h3>dialog</h3></a></li>
+            <li><a href="#fieldset"><h3>fieldset</h3></a></li>
+            <li><a href="#keygen"><h3>keygen</h3></a></li>
+            <li><a href="#legend"><h3>legend</h3></a></li>
+            <li><a href="#mark"><h3>mark</h3></a></li>
+            <li><a href="#meter"><h3>meter</h3></a></li>
+            <li><a href="#optgroup"><h3>optgroup</h3></a></li>
+            <li><a href="#output"><h3>output</h3></a></li>
+            <li><a href="#picture"><h3>picture</h3></a></li>
+            <li><a href="#progress"><h3>progress</h3></a></li>
+            <li><a href="#summary"><h3>summary</h3></a></li>
+            <li><a href="#template"><h3>template</h3></a></li>
+            <li><a href="#time"><h3>time</h3></a></li>
+            <li><a href="#wbr"><h3>wbr</h3></a></li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <section id="abbr">
+            <h2>&lt;abbr&gt;</h2>
+            <p><strong>Definition:</strong> Represents an abbreviation or acronym, with an optional title attribute for the full term.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to provide additional information about abbreviations or acronyms.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br>
+                    <code>title</code> - Specifies the full term for the abbreviation.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="bdi">
+            <h2>&lt;bdi&gt;</h2>
+            <p><strong>Definition:</strong> Isolates a part of text that might be formatted in a different direction from other text outside it.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to prevent text from being incorrectly formatted when mixed with text in a different direction.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;bdi&gt;مرحبا&lt;/bdi&gt; world</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="bdo">
+            <h2>&lt;bdo&gt;</h2>
+            <p><strong>Definition:</strong> Overrides the current text direction.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to change the text direction of its content.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;bdo dir="rtl"&gt;This text is right-to-left.&lt;/bdo&gt;</code></pre>
+                <p><strong>Special Attributes:</strong> <br>
+                    <code>dir</code> - Specifies the text direction (ltr or rtl).
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="cite">
+            <h2>&lt;cite&gt;</h2>
+            <p><strong>Definition:</strong> Represents the title of a work (e.g., a book, a song, a movie).</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to cite the title of a work.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;cite&gt;The Great Gatsby&lt;/cite&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="datalist">
+            <h2>&lt;datalist&gt;</h2>
+            <p><strong>Definition:</strong> Contains a set of &lt;option&gt; elements that represent the permissible or suggested options available to other controls.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to provide a list of predefined options for an input element.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;input list="browsers"&gt;
+    &lt;datalist id="browsers"&gt;
+        &lt;option value="Chrome"&gt;
+        &lt;option value="Firefox"&gt;
+        &lt;option value="Safari"&gt;
+        &lt;option value="Edge"&gt;
+    &lt;/datalist&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="details">
+            <h2>&lt;details&gt;</h2>
+            <p><strong>Definition:</strong> Creates a disclosure widget that users can open and close.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to create a collapsible section of content.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;details&gt;
+    &lt;summary&gt;More info&lt;/summary&gt;
+    &lt;p&gt;This is the detailed content.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="dialog">
+            <h2>&lt;dialog&gt;</h2>
+            <p><strong>Definition:</strong> Represents a dialog box or other interactive component, such as an inspector or window.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to create a dialog box.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;dialog open&gt;
+    &lt;p&gt;This is an open dialog box.&lt;/p&gt;
+&lt;/dialog&gt;</code></pre>
+                <p><strong>Special Attributes:</strong> <br>
+                    <code>open</code> - Specifies that the dialog is open.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="fieldset">
+            <h2>&lt;fieldset&gt;</h2>
+            <p><strong>Definition:</strong> Groups related elements in a form and draws a box around them.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to group related form elements.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="keygen">
+            <h2>&lt;keygen&gt;</h2>
+            <p><strong>Definition:</strong> Generates a key pair.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to generate a key pair for forms.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;keygen name="name"&gt;</code></pre>
+                <p><strong>Special Attributes:</strong> <br>
+                    <code>name</code> - Specifies the name of the key pair.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="legend">
+            <h2>&lt;legend&gt;</h2>
+            <p><strong>Definition:</strong> Represents a caption for the content of its parent &lt;fieldset&gt;.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to provide a caption for a fieldset.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="mark">
+            <h2>&lt;mark&gt;</h2>
+            <p><strong>Definition:</strong> Highlights text.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to highlight text.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;mark&gt;Highlighted text&lt;/mark&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="meter">
+            <h2>&lt;meter&gt;</h2>
+            <p><strong>Definition:</strong> Represents a scalar measurement within a known range (e.g., disk usage).</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to display a measurement within a range.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br> 
+                    <code>value</code> - Specifies the current value.<br>
+                    <code>min</code> - Specifies the minimum value.<br>
+                    <code>max</code> - Specifies the maximum value.<br>
+                    <code>low</code> - Specifies the low value range.<br>
+                    <code>high</code> - Specifies the high value range.<br>
+                    <code>optimum</code> - Specifies the optimum value.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="optgroup">
+            <h2>&lt;optgroup&gt;</h2>
+            <p><strong>Definition:</strong> Groups options within a &lt;select&gt; element.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to group related options in a dropdown list.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;select&gt;
+    &lt;optgroup label="Fruits"&gt;
+        &lt;option value="apple"&gt;Apple&lt;/option&gt;
+        &lt;option value="banana"&gt;Banana&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Vegetables"&gt;
+        &lt;option value="carrot"&gt;Carrot&lt;/option&gt;
+        &lt;option value="broccoli"&gt;Broccoli&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br> 
+                    <code>label</code> - Specifies the label for the option group.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="output">
+            <h2>&lt;output&gt;</h2>
+            <p><strong>Definition:</strong> Represents the result of a calculation or user action.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to display the result of a calculation or user action.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+    &lt;input type="range" id="a" value="50"&gt; +
+    &lt;input type="number" id="b" value="50"&gt;
+    &lt;output name="result" for="a b"&gt;100&lt;/output&gt;
+&lt;/form&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br> 
+                    <code>for</code> - Specifies the IDs of the elements whose values are used in the calculation.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="picture">
+            <h2>&lt;picture&gt;</h2>
+            <p><strong>Definition:</strong> Contains zero or more &lt;source&gt; elements and one &lt;img&gt; element to provide multiple versions of an image for different display/device scenarios.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to provide different image sources for different devices or screen sizes.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;picture&gt;
+    &lt;source media="(min-width: 800px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 400px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Example image"&gt;
+&lt;/picture&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="progress">
+            <h2>&lt;progress&gt;</h2>
+            <p><strong>Definition:</strong> Displays the progress of a task.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to show the progress of a task.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br> 
+                    <code>value</code> - Specifies the current progress.<br>
+                    <code>max</code> - Specifies the maximum value of the progress.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="summary">
+            <h2>&lt;summary&gt;</h2>
+            <p><strong>Definition:</strong> Defines a visible heading for the &lt;details&gt; element.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to provide a summary or heading for a &lt;details&gt; element.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;details&gt;
+    &lt;summary&gt;More info&lt;/summary&gt;
+    &lt;p&gt;This is the detailed content.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="template">
+            <h2>&lt;template&gt;</h2>
+            <p><strong>Definition:</strong> Holds client-side content that won’t be rendered when the page loads but can be instantiated later using JavaScript.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to define HTML fragments that can be used later.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;template id="my-template"&gt;
+    &lt;div&gt;This is a template&lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+    var template = document.getElementById('my-template');
+    document.body.appendChild(template.content.cloneNode(true));
+&lt;/script&gt;</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="time">
+            <h2>&lt;time&gt;</h2>
+            <p><strong>Definition:</strong> Represents a specific period in time.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to mark up dates and times.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>&lt;time datetime="2024-12-17T10:56:12"&gt;December 17, 2024&lt;/time&gt;</code></pre>
+                <p><strong>Special Attributes:</strong><br> 
+                    <code>datetime</code> - Specifies the date and time in a machine-readable format.
+                </p>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
+        <section id="wbr">
+            <h2>&lt;wbr&gt;</h2>
+            <p><strong>Definition:</strong> Suggests a line break opportunity within text.</p>
+            <div class="collapse-div">
+                <p><strong>Usage:</strong> Use this tag to suggest a line break opportunity within text.</p>
+                <p><strong>Example:</strong></p>
+                <pre><code>Supercalifragilistic&lt;wbr&gt;expialidocious</code></pre>
+            </div>
+            <button class="toggle-button" title="Toggle section">+</button>
+            <a href="#top" class="back-to-top" title="Back to top">^</a>
+        </section>
     </main>
-
+    <aside class="aside-low">
+        
+    </aside>
+    <footer class="footer">
+        <a href="https://www.facebook.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Andrei Laqui in Facebook"></a>
+        <a href="https://www.instagram.com/dreilaqui" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Andrei Laqui in Instagram"></a>
+        <a href="https://www.linkedin.com/in/andrei-laqui-28a717311" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="Andrei Laqui at LinkedIn"></a>
+        <a href="https://flic.kr/ps/zbq8h" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/000000/flickr.png" alt="Andrei Laqui in Flickr"></a>
+        <a href="mailto:dreilaqui@yahoo.com">
+            <img src="https://img.icons8.com/ios-filled/50/000000/email.png" alt="Email Andrei Laqui">
+        </a>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>

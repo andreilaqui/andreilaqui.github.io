@@ -1,0 +1,262 @@
+:root {
+    --color-header-bg: #333;
+    --color-banner-bg: #f4f4f4;
+    --color-nav-bg: #ccc;
+    --color-aside-left-bg: #ddd;
+    --color-main-content-bg: #eee;
+    --color-aside-low-bg: #bbb;
+    --color-footer-bg: #333;
+    --color-text: white;
+    /*--color-border: #000;*/
+}
+
+/* Ice Theme */
+:root {
+    --color-header-bg: #05445e;/*#3f92b7; /* Blue Grotto */
+    --color-banner-bg: #e3eff9; /* Baby Blue */
+    --color-nav-bg: #aacde5; /* Serenity */
+    --color-aside-left-bg: #6cc4dc; /* Tiffany Blue */
+    --color-main-content-bg: #e3eff9; /* Baby Blue */
+    --color-aside-low-bg: #b7ddfd; /* Tiffany Blue */
+    --color-footer-bg: #3f92b7; /* Blue Grotto */
+    --color-text: white;
+    /*--color-border: #000;*/
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "banner banner banner"
+        "nav nav nav"
+        "aside-left main-content main-content"
+        "aside-low aside-low aside-low"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    gap: 0px;
+    font-family: Arial, sans-serif;
+}
+
+header, .banner, .nav, .aside-left, .main-content, .aside-low, .footer {
+    min-height: 50px;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+}
+
+.header {
+    grid-area: header;
+    background: var(--color-header-bg);
+    color: var(--color-text);
+    min-height: 70px;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.banner {
+    grid-area: banner;
+    background: var(--color-banner-bg);
+    min-height: 100px;
+    text-align: center;
+
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.nav {
+    grid-area: nav;
+    background: var(--color-nav-bg);
+    min-height: 50px;
+}
+
+nav ul{
+    list-style-type:none;
+    text-align: center;
+}
+
+
+nav ul li {
+    display: inline-block;
+    padding: 1em 2em;
+}
+
+li a {
+    color: var(--color-header-bg);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.90em;
+}
+
+.aside-left {
+    grid-area: aside-left;
+    background: var(--color-aside-left-bg);
+    min-height: 200px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 0px 2px 5px #05445e;
+}
+
+.aside-left li{
+    list-style-type: none;
+    margin-bottom:.65em;
+}
+
+.aside-left a {
+    text-decoration: none;
+    color: var(--color-header-bg);
+    font-size: 1.25em;
+    line-height: 98%;
+}
+
+.aside-left a:hover {
+    text-decoration: none;
+    color: var(--color-banner-bg);
+}
+
+.main-content {
+    grid-area: main-content;
+    background: var(--color-main-content-bg);
+    min-height: 300px;
+}
+
+.main-content section {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    box-shadow: 5px 5px 10px #05445e;
+    border-radius: 8px;
+    
+}
+
+.main-content h2{
+    padding: 18px 2px;
+    
+    /*border: 1px solid red;*/
+}
+
+section pre{
+    background-color: white;
+    padding: 1em;
+    margin: 0 0.8em;
+}
+
+section p{
+    padding: 2px 10px;
+}
+
+code{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .85em;
+}
+
+.collapse-div{
+    display: none;
+}
+
+.back-to-top, .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif; /*need this to keep + and ^ look consistent through other browsers*/
+    line-height: 60%;
+    text-decoration: none;
+    color:var(--color-header-bg);
+    border: 1px solid var(--color-header-bg);
+    border-radius: 5px;
+    padding: 8px 5px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    color: var(--color-aside-left-bg);
+}
+
+.toggle-button {
+    right: 40px; /* Adjust this value to position it beside the "Back to top" button */
+    top: 8px;
+    padding: 4px 5px 4px;
+    margin:2px 0;
+}
+
+.aside-low {
+    grid-area: aside-low;
+    background: var(--color-aside-low-bg);
+    /* min-height: 50px; */
+    z-index: 1;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--color-footer-bg);
+    color: var(--color-text);
+    min-height: 70px;
+    text-align: center;
+    z-index: 1;
+}
+
+.footer a {
+    margin: 0 10px;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+}
+
+.src-site{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas: 
+            "header"
+            "banner"
+            "nav"
+            "aside-left"
+            "main-content"
+            "aside-low"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        display: block;
+        padding: .1em .2em;
+    }
+
+    .aside-left {
+        position: static;
+        height: auto;
+        overflow-y: visible;
+        text-align: center;
+    }
+
+    section pre{
+        width: 75vw;    /*prevent from extending too wide*/
+        overflow: auto; /*can scroll if phone is too narrow*/
+    }
+
+    
+}
